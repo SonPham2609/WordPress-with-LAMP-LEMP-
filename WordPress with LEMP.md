@@ -55,10 +55,25 @@ http://server_domain_or_IP
 ```
 * Khi quá trình cài đặt hoàn tất, bạn nên chạy một tập lệnh bảo mật được cài đặt sẵn với MySQL. Tập lệnh này sẽ xóa một số cài đặt mặc định không an toàn và khóa quyền truy cập vào hệ thống cơ sở dữ liệu của bạn. Bắt đầu tập lệnh tương tác bằng cách chạy:
 ```
-mysql_secure_installation
+# mysql_secure_installation
 ```
 * cài đặt mặt khẩu và bấm Y cho đến khi như sau:
 ![image](https://user-images.githubusercontent.com/91528234/196129691-04043cef-e600-4fb6-a8a7-ded823cb5076.png)
+* Chạy mysql với lệnh sau:
+```
+mysql -u root -p
+```
+* Để tạo cơ sở dữ liệu mới cho cài đặt WordPress của chúng tôi, hãy chạy các lệnh sau:
+```
+CREATE DATABASE wordpress_db;
+CREATE USER wordpress_user@localhost IDENTIFIED BY '12345678';
+GRANT ALL PRIVILEGES ON wordpress_db.* TO wordpress_user@localhost;
+FLUSH PRIVILEGES;
+exit;
+```
+![image](https://user-images.githubusercontent.com/91528234/196132041-91095dd7-7ad1-45f2-a411-89328d9c1295.png)
+
+
 ### Cài đặt PHP
 * Bạn đã cài đặt Nginx để phân phát nội dung của mình và đã cài đặt MySQL để lưu trữ và quản lý dữ liệu của bạn. Bây giờ bạn có thể cài đặt PHP để xử lý mã và tạo nội dung động cho máy chủ web.
 
@@ -66,8 +81,44 @@ mysql_secure_installation
 
 * Để cài đặt php-fpm và php-mysql các gói, hãy chạy:
 ```
-apt install php-fpm php-mysql
+# apt install php-fpm php-mysql
 ```
 Trên Ubuntu 20.04, Nginx có một khối máy chủ được bật theo mặc định và được định cấu hình để cung cấp tài liệu ra khỏi một thư mục tại /var/www/html. Mặc dù điều này hoạt động tốt cho một trang web nhưng có thể trở nên khó quản lý nếu bạn đang lưu trữ nhiều trang web. Thay vì sửa đổi /var/www/html, chúng tôi sẽ tạo cấu trúc thư mục bên trong /var/www cho trang web your_domain , giữ nguyên /var/www/html vị trí này làm thư mục mặc định được phục vụ nếu yêu cầu của khách hàng không khớp với bất kỳ trang web nào khác.
+### Cài đặt WordPress
+* Đầu tiên, thay đổi thư mục thành thư mục gốc của web mặc định Nginx và tải xuống phiên bản WordPress mới nhất bằng lệnh sau:
+```
+# cd /var/www/html
+# wget http://wordpress.org/latest.tar.gz
+```
+* Sau khi quá trình tải xuống hoàn tất, hãy giải nén tệp đã tải xuống bằng lệnh sau:
+```
+# tar -xzvf latest.tar.gz
+```
+Tiếp theo, thay đổi thư mục thành wordpress :
+```
+cd wordpress
+
+```
+* Tiếp theo, chỉnh sửa tệp cấu hình và xác định cài đặt cơ sở dữ liệu của bạn:
+
+```
+vim wp-config-sample.php
+```
+* Thay đổi các dòng sau:
+```
+define( 'DB_NAME', 'wordpress_db' );
+define( 'DB_USER', 'wordpress_user' );
+define( 'DB_PASSWORD', '12345678' );
+```
+```
+define('AUTH_KEY',         '?HXr7 _M-^@n&iNi1%/|RCm@#,:jt T^YSPm.x_tPI|4[JX;nnu$RTX|~P|D-G*D');
+define('SECURE_AUTH_KEY',  '-&IT?.[gVA1+,kF8TJl7=VUAC[kqJST| =; _t=c6!-E;xd~+%vTAu0A{1Zu+*qS');
+define('LOGGED_IN_KEY',    'jztpP84Sj<3895!wXYS#9;t#:y.;SQ[:T+Z1aa_7A^,>C923(a8KLw#D5T*<x7/U');
+define('NONCE_KEY',        ' k1?wuak`)/Xi5X$_}Xp(BJn$6I~ %h^NT^LdmKS9&-o7w:g`z.V`Smw%MtDZ$U>');
+define('AUTH_SALT',        '$$q/.VhXgvt8//V5#ZV`?!`skW;: 3eRcy{a&:t|QSwXDi- aE| ?`(T^vn{@As/');
+define('SECURE_AUTH_SALT', '2o/DZ<ciFOd,|_aP0~7=7aKzgB}-b.&Q^nZo>80`_ t)RBnQ4{@Lxi|4~Cja/uSq');
+define('LOGGED_IN_SALT',   ':]OuwX,C#^4/b5=U`?MY8zm04+D+>3*TEb(_ 5#+yYkTIR$FbsM;(-[%7$jS6^.j');
+define('NONCE_SALT',       '5!c6yjB%*n?x-2}QM%.% ^wCYT1ZOB+emNh1)sI=QQ]PLwhdSwhGTW+AmHu2]o!Q');
+```
 
 
