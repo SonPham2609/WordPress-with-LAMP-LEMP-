@@ -18,4 +18,5 @@ Tên miền hợp lệ để truy cập trang web WordPress (172.16.222.129)
 * Sau khi đăng nhập, hãy đảm bảo rằng máy chủ của bạn được cập nhật bằng cách chạy các lệnh sau:
 ``` 
 sudo apt-get update
-sudo apt-get upgrade```
+sudo apt-get upgrade 
+```
