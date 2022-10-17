@@ -13,7 +13,7 @@
 
 * Để kết nối với máy chủ của bạn qua SSH với tư cách là người dùng gốc, hãy sử dụng lệnh sau:
 ```ssh root@IP_ADDRESS ```
-* Mình sẽ dùng `root` với tên `ptson` với địa chỉ `IP_ADDRESS` là `172.16.222.129`e
+* Mình sẽ dùng `root` với tên `ptson` với địa chỉ `IP_ADDRESS` là `172.16.222.129`
 ![image](https://user-images.githubusercontent.com/91528234/196119251-a70b839e-9a4a-45bb-b95a-a433e4a37a12.png)
 * Sau khi đăng nhập, hãy đảm bảo rằng máy chủ của bạn được cập nhật bằng cách chạy các lệnh sau:
 ``` 
