@@ -120,5 +120,35 @@ define('SECURE_AUTH_SALT', '2o/DZ<ciFOd,|_aP0~7=7aKzgB}-b.&Q^nZo>80`_ t)RBnQ4{@L
 define('LOGGED_IN_SALT',   ':]OuwX,C#^4/b5=U`?MY8zm04+D+>3*TEb(_ 5#+yYkTIR$FbsM;(-[%7$jS6^.j');
 define('NONCE_SALT',       '5!c6yjB%*n?x-2}QM%.% ^wCYT1ZOB+emNh1)sI=QQ]PLwhdSwhGTW+AmHu2]o!Q');
 ```
+### Định cấu hình Nginx cho WordPress
+* Tiếp theo, bạn sẽ cần tạo tệp cấu hình máy chủ ảo Nginx để lưu trữ trang web WordPress của mình.
+```
+# vim /etc/nginx/conf.d/wp.conf
+```
+* Thêm các dòng sau:
+```
+server {
+        listen 80;
+        root /var/www/html/wordpress;
+        index  index.php index.html index.htm;
+        server_name yourdomain.com;
 
+        error_log /var/log/nginx/yourdomain.com_error.log;
+        access_log /var/log/nginx/yourdomain.com_access.log;
+
+        client_max_body_size 100M;
+        location / {
+                try_files $uri $uri/ /index.php?$args;
+        }
+        location ~ \.php$ {
+                include snippets/fastcgi-php.conf;
+                fastcgi_pass unix:/run/php/php7.4-fpm.sock;
+                fastcgi_param   SCRIPT_FILENAME $document_root$fastcgi_script_name;
+        }
+}
+```
+Tiếp theo, khởi động lại dịch vụ Nginx để áp dụng các thay đổi cấu hình:
+```
+# systemctl restart nginx
+```
 
