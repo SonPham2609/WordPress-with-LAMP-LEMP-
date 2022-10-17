@@ -17,6 +17,12 @@ Tên miền hợp lệ để truy cập trang web WordPress (172.16.222.129)
 ![image](https://user-images.githubusercontent.com/91528234/196119251-a70b839e-9a4a-45bb-b95a-a433e4a37a12.png)
 * Sau khi đăng nhập, hãy đảm bảo rằng máy chủ của bạn được cập nhật bằng cách chạy các lệnh sau:
 ``` 
-sudo apt-get update
-sudo apt-get upgrade 
+sudo apt update
+sudo apt upgrade 
 ```
+## Cài đặt LAMP
+1. Cài đặt Máy chủ Web Apache
+
+Apache là một máy chủ web nhanh và an toàn và là một trong những máy chủ web phổ biến và được sử dụng rộng rãi nhất trên thế giới. Tính dễ sử dụng của nó làm cho nó rất hấp dẫn khi bắt đầu với máy chủ web và lưu trữ máy chủ web.
+
+Để cài đặt máy chủ web Apache, hãy chạy lệnh sau:
