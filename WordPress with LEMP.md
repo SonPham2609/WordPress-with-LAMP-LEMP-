@@ -151,6 +151,11 @@ Tiếp theo, khởi động lại dịch vụ Nginx để áp dụng các thay �
 ```
 # systemctl restart nginx
 ```
-![image](https://user-images.githubusercontent.com/91528234/196150252-c39fa691-b97c-4142-96da-87003af2ad4e.png)
+* Sau khi khởi động lại ta được trang web như sau
+![image](https://www.rosehosting.com/blog/wp-content/uploads/2021/01/install-wordpress-with-lemp.png)
+* Tận hưởng thành quả thôi :3
+![image](https://user-images.githubusercontent.com/91528234/196150911-929b043e-24b4-4f21-9856-344e9718791f.png)
+
+
 
 
