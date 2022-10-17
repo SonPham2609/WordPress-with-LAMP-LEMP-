@@ -151,4 +151,6 @@ Tiếp theo, khởi động lại dịch vụ Nginx để áp dụng các thay �
 ```
 # systemctl restart nginx
 ```
+![image](https://user-images.githubusercontent.com/91528234/196150252-c39fa691-b97c-4142-96da-87003af2ad4e.png)
+
 
