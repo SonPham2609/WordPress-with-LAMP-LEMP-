@@ -1,13 +1,13 @@
 # LAMP là gì
  LAMP là chữ viết tắt thường được dùng để chỉ sự sử dụng các phần mềm Linux, Apache, MySQL và ngôn ngữ văn lệnh PHP hay Perl hay Python để tạo nên một môi trường máy chủ Web có khả năng chứa và phân phối các trang Web động. Bốn phần mềm nói trên tạo thành một gói phần mềm LAMP.
  # WordPress với LAMP
- Yêu cầu:
+ * Yêu cầu:
 
-Với mục đích của hướng dẫn này, chúng tôi sẽ sử dụng VPS Ubuntu. Lưu trữ VPS Ubuntu của chúng tôi đã được cài đặt sẵn với một ngăn xếp LAMP hoạt động đầy đủ. Tuy nhiên, chúng tôi vẫn sẽ đi qua tất cả các bước cần thiết và hướng dẫn bạn cách tự cài đặt và định cấu hình ngăn xếp LAMP, trong trường hợp bạn đang thực hiện việc này trên một máy chủ sạch.
+   * Với mục đích của hướng dẫn này, chúng tôi sẽ sử dụng VPS Ubuntu. Lưu trữ VPS Ubuntu của chúng tôi đã được cài đặt sẵn với một ngăn xếp LAMP hoạt động đầy đủ. Tuy nhiên, chúng tôi vẫn sẽ đi qua tất cả các bước cần thiết và hướng dẫn bạn cách tự cài đặt và định cấu hình ngăn xếp LAMP, trong trường hợp bạn đang thực hiện việc này trên một máy chủ sạch.
 
-Cũng cần có quyền root SSH đầy đủ hoặc người dùng có đặc quyền sudo. Tất cả các VPS của chúng tôi đều có quyền truy cập root đầy đủ mà không phải trả thêm phí.
+    * Cũng cần có quyền root SSH đầy đủ hoặc người dùng có đặc quyền sudo. Tất cả các VPS của chúng tôi đều có quyền truy cập root đầy đủ mà không phải trả thêm phí.
 
-Tên miền hợp lệ để truy cập trang web WordPress (172.16.222.129)
+    * Tên miền hợp lệ để truy cập trang web WordPress (172.16.222.129)
 ## Kết nối với máy chủ của bạn và cập nhật hệ thống của bạn
 * Trước khi bắt đầu, hãy kết nối với VPS của bạn qua SSH với tư cách là người dùng gốc (hoặc bằng tài khoản quản trị viên) và cập nhật phần mềm hệ thống của bạn lên phiên bản mới nhất hiện có.
 
