@@ -23,6 +23,15 @@ sudo apt upgrade
 ## Cài đặt LAMP
 1. Cài đặt Máy chủ Web Apache
 
-Apache là một máy chủ web nhanh và an toàn và là một trong những máy chủ web phổ biến và được sử dụng rộng rãi nhất trên thế giới. Tính dễ sử dụng của nó làm cho nó rất hấp dẫn khi bắt đầu với máy chủ web và lưu trữ máy chủ web.
+* Apache là một máy chủ web nhanh và an toàn và là một trong những máy chủ web phổ biến và được sử dụng rộng rãi nhất trên thế giới. Tính dễ sử dụng của nó làm cho nó rất hấp dẫn khi bắt đầu với máy chủ web và lưu trữ máy chủ web.
 
-Để cài đặt máy chủ web Apache, hãy chạy lệnh sau:
+* Để cài đặt máy chủ web Apache, hãy chạy lệnh sau:
+```
+# apt install apache2
+```
+* Khi quá trình cài đặt hoàn tất, hãy kích hoạt dịch vụ Apache để tự động khởi động khi khởi động hệ thống. Bạn có thể làm điều đó bằng lệnh sau:
+```
+# systemctl enable apache2
+```
+* Để xác minh rằng Apache đang chạy, hãy thực hiện lệnh sau:
+
