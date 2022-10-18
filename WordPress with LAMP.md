@@ -77,7 +77,7 @@ php -v
 ![image](https://user-images.githubusercontent.com/91528234/196369617-4aeb2061-479e-45b4-ad67-f2744bb57e58.png)
 ## Cài đặt WordPress
 
-* Bây giờ chúng ta đã thiết lập xong môi trường LAMP, bây giờ chúng ta có thể tiến hành cài đặt WordPress. Trước tiên, chúng tôi sẽ tải xuống và đặt các tệp cài đặt WordPress trong thư mục gốc của tài liệu máy chủ web mặc định, / var / www / html.
+* Bây giờ chúng ta đã thiết lập xong môi trường LAMP, bây giờ chúng ta có thể tiến hành cài đặt WordPress. Trước tiên, chúng tôi sẽ tải xuống và đặt các tệp cài đặt WordPress trong thư mục gốc của tài liệu máy chủ web mặc định `/var/www/html`.
 
 * Bạn có thể di chuyển đến thư mục này bằng lệnh sau:
 ```
@@ -90,7 +90,64 @@ cd /var/www/html
 ```
 * Sau đó, giải nén các tệp bằng:
 ```
-#tar -xzvf mới nhất.tar.gz
+# tar -xzvf mới nhất.tar.gz
 ```
-* Các tệp WordPress được giải nén bây giờ sẽ được đặt trong thư mục wordpress tại vị trí sau trên máy chủ của bạn / var / www / html / wordpress
+* Các tệp WordPress được giải nén bây giờ sẽ được đặt trong thư mục wordpress tại vị trí sau trên máy chủ của bạn `/var/www/html/wordpress`
+
+## Tạo cơ sở dữ liệu cho WordPress
+* Tiếp theo, chúng tôi sẽ tạo cơ sở dữ liệu và người dùng MySQL cho trang WordPress của chúng tôi. Đăng nhập vào máy chủ MySQL của bạn bằng lệnh sau và nhập mật khẩu gốc MySQL của bạn:
+```
+# mysql -u root -p
+```
+* Để tạo cơ sở dữ liệu mới cho cài đặt WordPress của chúng tôi, hãy chạy các lệnh sau:
+```
+CREATE DATABASE wordpress_db;
+CREATE USER wordpress_user@localhost IDENTIFIED BY 'strong-password';
+GRANT ALL PRIVILEGES ON wordpress_db.* TO wordpress_user@localhost;
+FLUSH PRIVILEGES;
+exit;
+```
+* Bạn có thể thay thế tên cơ sở dữ liệu (wordpress_db) và tên người dùng MySQL (wordpress_user) bằng tên riêng của bạn nếu bạn muốn. Ngoài ra, hãy đảm bảo thay thế “strong-password” bằng một mật khẩu mạnh, mình dùng ở đâu là `p@ssw0rd`.
+![image](https://user-images.githubusercontent.com/91528234/196373447-fc96b50a-ed3c-442e-a1c0-9f6f5835d6f3.png)
+
+
+* Khi cơ sở dữ liệu được tạo, chúng tôi sẽ cần thêm thông tin này vào tệp cấu hình WordPress.
+* Đảm bảo bạn đang ở đường dẫn sau `/var/www/html/wordpress` :
+```
+# cd /var/www/html/wordpress
+```
+* và sau đó chạy lệnh sau để đổi tên tệp cấu hình mẫu:
+```
+# mv wp-config-sample.php wp-config.php
+```
+* Bây giờ, hãy mở tệp wp-config.php bằng trình soạn thảo văn bản yêu thích của bạn, ví dụ:
+```
+# vim wp-config.php
+```
+* Và cập nhật cài đặt cơ sở dữ liệu, thay thế wordpress_db, wordpress_user và strong_password bằng các chi tiết của riêng bạn:
+```
+// ** MySQL settings - You can get this info from your web host ** //
+/** The name of the database for WordPress */define('DB_NAME', 'wordpress_db');
+
+/** MySQL database username */define('DB_USER', 'wordpress_user');
+
+/** MySQL database password */define('DB_PASSWORD', 'strong-password');
+
+/** MySQL hostname */define('DB_HOST', 'localhost');
+
+/** Database Charset to use in creating database tables. */define('DB_CHARSET', 'utf8');
+
+/** The Database Collate type. Don't change this if in doubt. */define('DB_COLLATE', '');
+```
+* Mình thay `strong-password` bằng `p@ssw0rd`
+![image](https://user-images.githubusercontent.com/91528234/196376806-4fbf01ef-23cb-4c68-aab8-67a966da8d57.png)
+## Cấu hình máy chủ Apache
+* If you have a valid domain name, and you want to use it to access your WordPress instance, you will need to create a new Apache virtual host file. Let’s say we want to access our WordPress with the mydomain.com domain name. Wherever you see a mydomain.com show up in the tutorial, make sure to replace it with your domain name to make sure that everything is named correctly.
+
+* First, run the following command to create the virtual host configuration file :
+```
+
+
+
+
 
