@@ -139,15 +139,29 @@ exit;
 
 /** The Database Collate type. Don't change this if in doubt. */define('DB_COLLATE', '');
 ```
-* Mình thay `strong-password` bằng `p@ssw0rd`
-![image](https://user-images.githubusercontent.com/91528234/196376806-4fbf01ef-23cb-4c68-aab8-67a966da8d57.png)
-## Cấu hình máy chủ Apache
-* If you have a valid domain name, and you want to use it to access your WordPress instance, you will need to create a new Apache virtual host file. Let’s say we want to access our WordPress with the mydomain.com domain name. Wherever you see a mydomain.com show up in the tutorial, make sure to replace it with your domain name to make sure that everything is named correctly.
+* Mình thay `strong-password` bằng `p@ssword`
+![image](https://user-images.githubusercontent.com/91528234/196385521-30ead2cd-d59b-491c-a977-0f93525cdd43.png)
 
-* First, run the following command to create the virtual host configuration file :
+## Cấu hình máy chủ Apache
+
+
+* Di chuyển đến file sau:
+```
+# /etc/apache2/site-availble
+```
+* mở file sau bằng trình soạn thảo Vim:
+```
+# vim 000-default.conf 
+```
+* Sửa file như sau
+![image](https://user-images.githubusercontent.com/91528234/196387312-d500116d-79ae-4af2-ab3d-d990b1a31475.png)
+* Reset lại apache server
+```
+# systemctl restart apache2
 ```
 
-
+![image](https://user-images.githubusercontent.com/91528234/196387489-fedea10c-d29c-49b9-9928-a5cb16cd8805.png)
+Chúc mừng bạn đã hoàn thành việc cài đặt và trải nghiệm thôi :3
 
 
 
