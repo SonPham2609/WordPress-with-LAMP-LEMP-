@@ -19,6 +19,7 @@ Hầu hết các Developer nên biết về LAMP stack truyền thống.vì nó 
 * Các thành phần cấu thành LEMP stack cũng gần tương tự với LAMP, chỉ khác là Apache sẽ được thay thế bởi nginx. Nginx được đọc là “engine-x”, giải thích cho chữ E trong “LEPM”, nginx cũng là một ứng dụng HTTP proxy nhưng không có được danh tiếng ấn tượng như Apache, tuy nhiên, nó có ưu điểm là cho phép xử lý tốc độ tải cao hơn đối với các HTTP request.
 
 * Nginx giờ đây, đã đạt được sự thu hút đáng kể đối với người dùng khi nó bắt đầu được nhiều người sử dụng từ năm 2008 và hiện trở thành ứng dụng web server tiếng tăm thứ 2 sau Apache khi đề cập các active site theo báo cáo của Netcraft.
+
 ![image](https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcST12roMOjK-Ns_P1Aid7C5gVLoTdAAnyPfZoUIOXurvP7wZ152DDCFXylxNlvKMcWAVPk&usqp=CAU)
 
 ## Sự khác biệt giữa LEMP và LAMP Stack là gì ?
