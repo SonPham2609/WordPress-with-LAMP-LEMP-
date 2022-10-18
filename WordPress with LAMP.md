@@ -164,4 +164,7 @@ exit;
 Chúc mừng bạn đã hoàn thành việc cài đặt và trải nghiệm thôi :3
 
 
+## Tham khảo thêm tại
+* https://www.rosehosting.com/blog/how-to-install-wordpress-with-lamp-stack-on-ubuntu-20-04/#:~:text=The%20LAMP%20stack%20is%20a,MySQL%20database%20server%20and%20PHP.
+* https://www.youtube.com/watch?v=q-qfLUTgUl8&t=302s&ab_channel=TonyTeachesTech
 
