@@ -12,17 +12,17 @@ Hầu hết các Developer nên biết về LAMP stack truyền thống.vì nó 
 
 * Cả Apache, PHP và Mysql đều có mã nguồn mở, đó là lý do tại sao Linux là lớp nền tảng cho môi trường này. Đây cũng là môi trường đơn giản nhất để các developer làm web trực tuyến.
 
+![image](https://www.semtek.com.vn/wp-content/uploads/2021/01/lamp-stack-la-gi-1-768x480.png)
 
 
 ## LEMP stack là gì?
-Các thành phần cấu thành LEMP stack cũng gần tương tự với LAMP, chỉ khác là Apache sẽ được thay thế bởi nginx. Nginx được đọc là “engine-x”, giải thích cho chữ E trong “LEPM”, nginx cũng là một ứng dụng HTTP proxy nhưng không có được danh tiếng ấn tượng như Apache, tuy nhiên, nó có ưu điểm là cho phép xử lý tốc độ tải cao hơn đối với các HTTP request.
+* Các thành phần cấu thành LEMP stack cũng gần tương tự với LAMP, chỉ khác là Apache sẽ được thay thế bởi nginx. Nginx được đọc là “engine-x”, giải thích cho chữ E trong “LEPM”, nginx cũng là một ứng dụng HTTP proxy nhưng không có được danh tiếng ấn tượng như Apache, tuy nhiên, nó có ưu điểm là cho phép xử lý tốc độ tải cao hơn đối với các HTTP request.
 
-Nginx giờ đây, đã đạt được sự thu hút đáng kể đối với người dùng khi nó bắt đầu được nhiều người sử dụng từ năm 2008 và hiện trở thành ứng dụng web server tiếng tăm thứ 2 sau Apache khi đề cập các active site theo báo cáo của Netcraft.
+* Nginx giờ đây, đã đạt được sự thu hút đáng kể đối với người dùng khi nó bắt đầu được nhiều người sử dụng từ năm 2008 và hiện trở thành ứng dụng web server tiếng tăm thứ 2 sau Apache khi đề cập các active site theo báo cáo của Netcraft.
+![image](https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcST12roMOjK-Ns_P1Aid7C5gVLoTdAAnyPfZoUIOXurvP7wZ152DDCFXylxNlvKMcWAVPk&usqp=CAU)
 
-Sự khác biệt giữa LEMP và LAMP Stack là gì ?
-Sự khác biệt giữa LEMP và LAMP Stack là gì ? Như đã nói, khác biệt cơ bản giữa LAMP và LEMP stack là ở 2 thành phần Apache và Nginx. Vậy việc sử dụng nginx và Apache sẽ tạo ra những khác biệt gì? Chúng ta sẽ cùng so sánh riêng 2 phần mềm này để thấy được rõ hơn sự khác biệt:
-
-lamp stack là gì
+## Sự khác biệt giữa LEMP và LAMP Stack là gì ?
+* Sự khác biệt giữa LEMP và LAMP Stack là gì ? Như đã nói, khác biệt cơ bản giữa LAMP và LEMP stack là ở 2 thành phần Apache và Nginx. Vậy việc sử dụng nginx và Apache sẽ tạo ra những khác biệt gì? Chúng ta sẽ cùng so sánh riêng 2 phần mềm này để thấy được rõ hơn sự khác biệt:
 
 Apache
 Apache đã được sử dụng từ lâu (từ những năm 1995), có rất nhiều các module được viết và cả người dùng tham gia vào mở rộng hệ chức năng cho Apache.
