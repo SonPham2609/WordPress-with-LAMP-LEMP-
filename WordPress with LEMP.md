@@ -155,6 +155,9 @@ Tiếp theo, khởi động lại dịch vụ Nginx để áp dụng các thay �
 ![image](https://www.rosehosting.com/blog/wp-content/uploads/2021/01/install-wordpress-with-lemp.png)
 * Tận hưởng thành quả thôi :3
 ![image](https://user-images.githubusercontent.com/91528234/196150911-929b043e-24b4-4f21-9856-344e9718791f.png)
+## Tham khảo thêm tại
+* https://www.rosehosting.com/blog/how-to-install-wordpress-with-lemp-on-ubuntu-20-04/
+* https://www.youtube.com/watch?v=q1c_66QjRYo&ab_channel=TonyTeachesTech
 
 
 
