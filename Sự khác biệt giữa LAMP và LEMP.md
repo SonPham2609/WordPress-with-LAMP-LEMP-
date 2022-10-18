@@ -37,25 +37,7 @@ Hầu hết các Developer nên biết về LAMP stack truyền thống.vì nó 
 * Các module sẽ được chèn vào trong thời gian biên dịch, có trình biên dịch mã PHP bên trong (không cần đến module PHP).
 Để kết luận thì nginx nhanh hơn và có khả năng xử lý tải cao.hơn nhiều so với Apache khi sử dụng cùng một bộ phần cứng. Tuy nhiên, Apache vẫn là tốt hơn nhiều khi nói đến chức.năng và tính sẵn sàng của các module cần thiết để làm việc với các ứng dụng máy chủ back-end.và chạy các ngôn ngữ kịch bản lệnh. Vậy nên việc lựa chọn sẽ phụ thuộc phần lớn vào những gì bạn.muốn chạy trên web server của mình. Việc chạy cả Apache và nginx trên cùng một máy chủ vẫn.có khả năng thực hiện được, và nó sẽ giúp người dùng có được.lợi ích tốt nhất từ cả 2 phương pháp. Ví dụ, bạn có thể chạy nginx như reverse proxy.trong khi để Apache chạy trong back-end.
 
-### Phân quyền tệp và thư mục
-Sử dụng máy chủ Linux việc phân quyền tệp và thư mục rất quan trọng. Ví dụ trong trường hợp người dùng upload files lên hệ thống mà bạn chưa phân quyền.thư mục thì lúc này việc đọc và ghi file lên máy chủ sẽ xảy ra lỗi. Và máy chủ web sẽ trả về lỗi 500.
 
-Phân quyền trong Linux có 3 quyền hạn cơ bản của một user/group nào.đó trên một file/folder nào đó bao gồm:
-
-* r (read) – quyền đọc file/folder.
-* w (write) – quyền ghi/sửa nội dung file/folder.
-* x (execute) – quyền thực thi (truy cập) thư mục. Đối với thư mục thì bạn cần phải có quyền execute thì mới dùng lệnh cd để truy cập vào được.
-### Log và xem log error
-Tùy thuộc vào config hệ thống mà các file log sẽ nằm ở vị trí tương ứng. Ví dụ webite của bạn hiển thị một màn hình trắng tinh và không có bất cứ thông báo.nào từ màn hình debug. Lúc này bạn cần xem log hệ thống xem sao nhé.
-
-### Cấu hình cơ sở dữ liệu (Database)
-Để mở rộng hay backup một hệ thống cũng như để đảm bảo một cơ sở dữ liệu toàn vẹn, không bị mất mát trước những sự cố. Việc hiểu biết nơi, cách cấu hình cơ sở dữ liệu cũng khá quan trọng bạn có thể tìm hiểu thêm về cấu hình Mysql Replication.
-
-### Cài đặt package
-Linux không cung cấp đầy đủ các package cho anh em developer, nó chỉ làm môi trường thôi, còn lại bạn cần package nào thì tải cái đó. Để tải package cần thiết ta có thể dùng lệnh apt hoặc là yum.
-
-### Chỉnh sửa file trực tiếp trên máy chủ
-Nhiều lúc bạn sẽ gặp phải lỗi và phải hot fix trực tiếp trên server, hoặc config web server. Việc này đòi hỏi bạn phải biết cách sử dụng trình soạn thảo của Linux thông qua câu lệnh vi ít nhất bạn có thể mở file và chỉnh sửa file. Lúc này bạn sẽ cần một list các câu lệnh Linux thông dụng để làm việc cho tiện, search thêm Google mỗi khi cần dùng nhé.
 
 ## Tham khảo thêm tại
 https://bizflycloud.vn/tin-tuc/tong-quan-ve-lamp-lemp-stack-phan-biet-va-huong-dan-cai-dat-tren-server-20180820105455562.htm
